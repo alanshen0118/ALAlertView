@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNQ-zh-J7U">
+                                <rect key="frame" x="270" y="205" width="60" height="30"/>
+                                <state key="normal" title="只有消息"/>
+                                <connections>
+                                    <action selector="e__message:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OfV-UA-2ri"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vk-qS-Fev">
+                                <rect key="frame" x="263" y="285" width="75" height="30"/>
+                                <state key="normal" title="消息和标题"/>
+                                <connections>
+                                    <action selector="e__messageAndTitle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DTm-IF-UG6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhm-UW-dKv">
+                                <rect key="frame" x="278" y="375" width="45" height="30"/>
+                                <state key="normal" title="多按钮"/>
+                                <connections>
+                                    <action selector="e__mutiButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="twj-QP-3bp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrK-As-L78">
+                                <rect key="frame" x="248" y="115" width="105" height="30"/>
+                                <state key="normal" title="提示框消失回调"/>
+                                <connections>
+                                    <action selector="e__mutiAlertWithoutOverlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E0Z-A9-2kB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PNQ-zh-J7U" firstAttribute="top" secondItem="RrK-As-L78" secondAttribute="bottom" constant="60" id="2nd-Qk-4gQ"/>
+                            <constraint firstItem="8Vk-qS-Fev" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="47Q-td-h9O"/>
+                            <constraint firstItem="RrK-As-L78" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jev-bb-0uL"/>
+                            <constraint firstItem="8Vk-qS-Fev" firstAttribute="top" secondItem="PNQ-zh-J7U" secondAttribute="bottom" constant="50" id="KGb-6v-Fbe"/>
+                            <constraint firstItem="8Vk-qS-Fev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PfF-Od-Gvh"/>
+                            <constraint firstItem="vhm-UW-dKv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fUk-Ze-pUT"/>
+                            <constraint firstItem="PNQ-zh-J7U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k5V-fG-woq"/>
+                            <constraint firstItem="vhm-UW-dKv" firstAttribute="top" secondItem="8Vk-qS-Fev" secondAttribute="bottom" constant="60" id="new-iP-lHZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

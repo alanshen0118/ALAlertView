@@ -1,9 +1,21 @@
-# ALAlertView
-Invoke simple macro to show system alertView(UIAlertController,UIAlertView)
-***
+//
+//  ALAlertView.h
+//  Sollair
+//
+//  Created by alan on 8/8/16.
+//  Copyright © 2016 bjdv. All rights reserved.
+//
 
-```
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#define kIOS9_OR_LATER ( [[[UIDevice currentDevice] systemVersion] compare:@"9.0"] != NSOrderedAscending )
+
 #define XXALERT(msg) [ALAlertView showMessage:msg];
+
+typedef void(^CancelCallBack)();
+typedef void(^OtherCallBack)(NSInteger buttonIndex);
+
+@interface ALAlertView : NSObject<UIAlertViewDelegate>
 
 + (instancetype)alertView;
 
@@ -66,4 +78,5 @@ Invoke simple macro to show system alertView(UIAlertController,UIAlertView)
  *  @param dismissCallBack 确定回调
  */
 - (void)showAlertViewWithTitle:(NSString *)title message:(NSString *)message dismissCallBack:(CancelCallBack)dismissCallBack;
-```
+
+@end
